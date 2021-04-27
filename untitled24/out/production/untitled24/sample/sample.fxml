@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <FlowPane prefHeight="31.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <VBox prefHeight="200.0" prefWidth="100.0">
+                <children>
+                    <ChoiceBox fx:id="choiceBox" prefWidth="150.0">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Зависимость" />
+                                <String fx:value="Ассоциация" />
+                            </FXCollections>
+                        </items>
+                    </ChoiceBox>
+                    <ListView fx:id="viewArrow" prefHeight="200.0" prefWidth="200.0" />
+                </children></VBox>
+        </FlowPane>
+    </top>
+    <right>
+        <Canvas fx:id="canvas" height="598.0" onMousePressed="#mousePressed" onMouseReleased="#mouseReleased" width="497.0" BorderPane.alignment="CENTER" />
+    </right>
+</BorderPane>
